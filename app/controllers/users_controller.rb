@@ -61,7 +61,7 @@ class UsersController < ApplicationController
   def set_user
     @user = User.includes(:recipe_items, :foods).find(params[:id])
   end
-  
+
   # Only allow a list of trusted parameters through.
   def user_params
     params.require(:user).permit(:name)
