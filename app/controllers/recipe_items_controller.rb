@@ -3,11 +3,15 @@ class RecipeItemsController < ApplicationController
 
   # GET /recipe_items or /recipe_items.json
   def index
-    @recipe_items = RecipeItem.all
+    # eager loading the recipe_items from the database along with their associated recipe_foods records
+    @recipe_items = RecipeItem.includes(:user, :foods)
   end
 
   # GET /recipe_items/1 or /recipe_items/1.json
-  def show; end
+  def show
+    # Eager load the associated records for recipe_foods and user
+    @recipe_foods = @recipe_item.recipe_foods.includes(:food)
+  end
 
   # GET /recipe_items/new
   def new
