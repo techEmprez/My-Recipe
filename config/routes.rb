@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "user#index"
+  root to: "users#index"
   resources :recipe_foods
   resources :recipe_items
   resources :foods
