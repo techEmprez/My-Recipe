@@ -14,25 +14,24 @@
  *= require_self
  */
 
- @import "navbar.css";
- @import "home.css";
- @import "form.css";
- 
- *,
- *::after,
- *::before {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
- 
-   background-color: #db7c26;
-   color: bisque;
-   font-family: Arial, Helvetica, sans-serif;
- }
- 
+@import "navbar.css";
+@import "home.css";
+@import "form.css";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #db7c26;
+  color: bisque;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
