@@ -7,7 +7,10 @@ class RecipeItemsController < ApplicationController
   end
 
   # GET /recipe_items/1 or /recipe_items/1.json
-  def show; end
+  def show
+    @food = Food.all
+    @recipe_food = RecipeFood.all
+  end
 
   # GET /recipe_items/new
   def new
