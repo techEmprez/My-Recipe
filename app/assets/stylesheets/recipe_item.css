@@ -49,8 +49,9 @@
 .delete {
   padding: 4px 8px;
   color: #cf0101;
-  background: #f4f4f4;
+  background: bisque;
   border: 1px solid #282828;
+  cursor: pointer;
 }
 
 #recipe-details {
@@ -80,7 +81,7 @@
 
 .recipe-link a:hover {
   background: #282828;
-  color: #fff;
+  color: bisque;
   box-shadow: 4px 4px 7px #4e4e4e;
 }
 
@@ -95,8 +96,8 @@
 }
 
 .edit-recipe {
-  background-color: #ffffffe3;
-  padding: 20px;
+  background-color: bisque;
+  padding: 2px;
   margin-top: 20px;
   border-radius: 7px;
   box-shadow: 0 0 5px #7e7e7e;
@@ -138,7 +139,7 @@
 
 .update input {
   padding: 10px 15px;
-  color: #a50000;
+  color: bisque;
   border: 1px solid;
   border-radius: 5px;
   cursor: pointer;
