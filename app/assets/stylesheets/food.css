@@ -5,7 +5,7 @@
 }
 
 #foods {
-  border: 3px solid white;
+  border: 3px solid bisque;
   background-color: rgb(255, 255, 255, 0.5);
   border-radius: 10px;
   width: 70%;
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: center;
   background-color: red;
-  color: white;
+  color: bisque;
   cursor: pointer;
   text-decoration: none;
   margin-top: 20px;
@@ -44,7 +44,7 @@
 
 .btn_new_food:hover {
   color: red;
-  background-color: white;
+  background-color: bisque;
   border: 2px solid red;
   padding: 4.5px 8px;
   font-size: 20px;

@@ -1,7 +1,7 @@
 header {
   display: flex;
   width: 100%;
-  background: none;
+  background: #db7c26;
   padding: 0 20px;
 }
 
@@ -39,7 +39,7 @@ nav {
 }
 
 .nav-item:hover {
-  color: red;
+  color: bisque;
 }
 
 .nav_items {
