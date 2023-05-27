@@ -78,4 +78,3 @@ class RecipeItemsController < ApplicationController
     @total_price = @missing_foods.sum(:price)
   end
 end
-s
