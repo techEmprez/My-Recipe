@@ -1,0 +1,25 @@
+<h3 class="text-center">Recipes created by other users that are set to be public </h3>
+
+<div>
+<div>
+    <% @recipes.each do |recipe| %>
+        <% if recipe.public %>
+            <div>
+                <h3>
+                <a href="/recipes/<%= recipe.id %>"> <%= recipe.name %></a>
+                </h3>
+                <p>Created By: <%= recipe.user.name %></p>
+            </div>
+            <div>
+                <p> Total food items: <%= recipe.recipe_foods.count %></p>
+            </div>
+        <% end %>
+    <% end %>
+<div>
+<p>
+    <% if @recipes.empty? %>
+        <span>No recipes added yet</span>
+    <% end %>
+    </p>
+</div>
+</div>

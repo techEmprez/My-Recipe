@@ -1,0 +1,27 @@
+<%= form_with model: recipe_food, url: recipe_recipe_food_path(recipe_food.recipe_id, recipe_food.id), html: {method: "patch"} do |form| %>
+  <% if recipe_food.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
+
+      <ul>
+        <% recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :Please_select_a_food_item_to_add, class: "d-block mb-2"%>
+    <%= form.collection_select :food_id, all_foods, :id, :name, :prompt => true, class: "select-inventory-food w-75" %>
+  </div>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity, class: "mt-2" %>
+  </div>
+
+  <div class="mt-4">
+    <%= form.submit "Update Recipe Food" %>
+  </div>
+<% end %>

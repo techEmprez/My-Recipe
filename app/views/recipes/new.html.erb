@@ -1,0 +1,28 @@
+<div>
+<h3> Add a new recipe </h3>
+<%= form_with model: @recipe do |form| %>
+    <div class="form-outline mb-5">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control" %>
+    </div>
+    <div class="form-outline mb-5">
+        <%= form.label :description %>
+        <%= form.text_area :description, class: "form-control" %>
+    </div>
+    <div class="form-outline mb-5">
+        <%= form.label :preparation_time %>
+        <%= form.text_field :preparation_time, class: "form-control" %>
+    </div>
+    <div class="form-outline mb-5">
+        <%= form.label :cooking_time %>
+        <%= form.text_field :cooking_time, class: "form-control" %>
+    </div>
+    <div class="form-outline mb-5">
+        <%= form.label :public %>
+        <%= form.check_box :public %>
+    </div>
+    <div class="form-outline mb-5">
+        <%= form.submit %>
+    </div>
+    <% end %>
+</div>

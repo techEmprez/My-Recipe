@@ -1,0 +1,25 @@
+  <table class="table table-striped mt-5">
+    <thead>
+    <tr>
+      <th scope="col">Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% inventory_foods.each do |inventory_food| %>
+    <tr>
+      <td><%= inventory_food.food.name %></td>
+      <td><%= inventory_food.quantity %></td>
+      <td>
+        <% if can? :delete, inventory_food.inventory%>
+            <%= button_to "Delete", inventory_inventory_food_path(inventory_food.inventory_id, inventory_food), method: :delete, class: "btn btn-danger btn-sm" %>
+        <% else %>
+            <%= button_to "Delete", inventory_inventory_food_path(inventory_food.inventory_id, inventory_food), method: :delete, class: "btn btn-danger btn-sm", disabled: true %>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
+

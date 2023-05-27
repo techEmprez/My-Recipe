@@ -1,0 +1,10 @@
+<% if @all_foods.length > 0 %>
+  <h3 class="mb-4 text-center">New inventory food</h3>
+  <%= render "form", inventory_food: @inventory_food, all_foods: @all_foods %>
+<% else %>
+  <h2 class="text-center">There is no food single food item in the database </h2>
+
+  <%= link_to "Create food item", new_food_path , class: "btn btn-success btn-lg mt-4" %>
+<% end %>
+
+

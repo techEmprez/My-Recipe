@@ -1,0 +1,33 @@
+  <table class="table table-striped mt-5">
+    <thead>
+    <tr>
+      <th scope="col">Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Value</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% recipe_foods.each do |recipe_food| %>
+    <tr>
+      <td><%= recipe_food.food.name %></td>
+      <td><%= recipe_food.quantity %></td>
+      <td><%= recipe_food.food.price%></td>
+      <td class="d-flex">
+        <div class="me-3">
+            <% if can? :edit, recipe_food.recipe %>
+                <%= button_to "Delete", recipe_recipe_food_path(recipe_food.recipe_id, recipe_food), method: :delete, class: "btn btn-danger btn-sm" %>
+            <% else %>
+                <%= button_to "Delete", recipe_recipe_food_path(recipe_food.recipe_id, recipe_food), method: :delete, class: "btn btn-danger btn-sm", disabled: true%>
+            <% end %>
+        </div>
+         <div>
+            <% if can? :delete, recipe_food.recipe %>
+                <%= link_to "Edit", edit_recipe_recipe_food_path(recipe_food.recipe_id, recipe_food), method: :edit, class: "btn btn-secondary btn-sm" %>
+            <% end %>
+        </div>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>

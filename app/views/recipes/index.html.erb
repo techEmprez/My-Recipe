@@ -1,0 +1,32 @@
+  <div class="recipe-card">
+    <% if @recipes.empty? %>
+      <h2>No recipes yet</h2>
+    <% end %>
+
+    <% @recipes.each do |recipe| %>
+      <div class="d-flex mb-3 align-items-center">
+        <div class="w-25">
+          <h3>
+            <a href="/recipes/<%= recipe.id %>"> <%= recipe.name %></a>
+          </h3>
+          <% if can? :delete, recipe %>
+            <%= button_to "Delete", recipe_path(recipe), method: :delete, class: "btn btn-danger" %>
+          <% else %>
+            <%= button_to "Delete", recipe_path(recipe), method: :delete, disabled: true, class: "btn btn-danger" %>
+          <% end %>
+
+        </div>
+        <div class="ms-2">
+          <%= recipe.description %></p>
+        </div>
+      </div>
+    <% end %>
+
+     <div class="new-recipe mt-4">
+      <%=link_to new_recipe_path do %>
+        <button class="btn btn-success">Add new recipe</button>
+      <% end %>
+     </div>
+  </div>
+
+

@@ -1,0 +1,9 @@
+<%= turbo_frame_tag "modal" do %>
+  <div class="popup-window">
+    <h3 class="text-center">Generating shopping list</h3>
+    <p >Choose an inventory to use </p>
+    <%= render "form", shopping_list: @shopping_list, all_inventories: @all_inventories %>
+
+    <%= button_tag "Close",data: { action: "turbo-modal#hideModal" }, type: "button", class: "close-popup"%>
+  </div>
+<% end %>

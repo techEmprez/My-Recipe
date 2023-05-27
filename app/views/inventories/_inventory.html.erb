@@ -1,0 +1,14 @@
+<div class="" id="<%= dom_id inventory %>">
+  <div>
+    <%= link_to inventory_path(inventory), class: "text-decoration-none text-dark d-flex" do%>
+      <p class="inventory-name">
+        <%= inventory.name %>
+      </p>
+
+      <p class="inventory-description">
+        <%= inventory.description %>
+     </p>
+    <% end %>
+  </div>
+
+</div>
