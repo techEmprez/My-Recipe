@@ -102,7 +102,7 @@ Clone this repository to your desired folder:
 change directory to cloned folder
 
 ```
-  cd cookPad
+  cd My-Recipe
 ```
 
 ### Install
@@ -125,7 +125,7 @@ To run the project, execute the following command:
 
 - After running `rails server`, open your browser and enter this address http://localhost:3000/
 
-- Congratulations! your're running **_cookPad_**
+- Congratulations! your're running **_My-Recipe_**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,13 +133,13 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Choise Osobor**
+👤 **Choice Osobor**
 
 - GitHub: [@techempress](https://github.com/techempress)
 - Twitter: [choice](https://twitter.com/choice)
 - LinkedIn: [choice](https://www.linkedin.com/in/choice/)
 
-👤 **Kibirige John**
+👤 **Emmanuel Simasiku**
 - Github: [Mukumbuta](https://github.com/Mukumbuta)
 - Twitter: [mukumbuta8](https://twitter.com/mukumbuta8)
 - LinkedIn: [Mukumbuta](https://www.linkedin.com/in/Mukumbuta/)
