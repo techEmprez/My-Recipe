@@ -3,11 +3,15 @@ class RecipeItemsController < ApplicationController
 
   # GET /recipe_items or /recipe_items.json
   def index
-    @recipe_items = RecipeItem.all
+    # eager loading the recipe_items from the database along with their associated recipe_foods records
+    @recipe_items = RecipeItem.includes(:user, :foods)
   end
 
   # GET /recipe_items/1 or /recipe_items/1.json
-  def show; end
+  def show
+    # Eager load the associated records for recipe_foods and user
+    @recipe_foods = @recipe_item.recipe_foods.includes(:food)
+  end
 
   # GET /recipe_items/new
   def new
@@ -66,4 +70,16 @@ class RecipeItemsController < ApplicationController
   def recipe_item_params
     params.require(:recipe_item).permit(:name, :preparation_time, :cooking_time, :description, :public, :user_id)
   end
+
+  def missing_food
+    @user = current_user
+    @recipe_item = @user.recipe_item.includes(:recipe_foods)
+    @general_foods = @user.recipe_foods
+
+    @missing_foods = @general_foods - @recipe_item.flat_map(&:recipe_foods)
+
+    @total_food_items = missing_foods.count
+    @total_price = @missing_foods.sum(:price)
+  end
 end
+s

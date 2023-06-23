@@ -1,0 +1,15 @@
+<h2>Missing Food Items</h2>
+
+<% if @missing_foods.present? %>
+    <ul>
+        <% @missing_foods.each do |food| %>
+            <li><%= food.name %> | <%= food.price %></li>
+        <% end %>
+    </ul>
+
+    <p> Total Food Items: <%= @total_food_items %></p>
+    <p> Total Price: <%= @total_price
+
+<% else %>
+    <p>No missing food items found.</p>
+<% end %>
