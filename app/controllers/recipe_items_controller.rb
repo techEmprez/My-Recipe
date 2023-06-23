@@ -20,6 +20,7 @@ class RecipeItemsController < ApplicationController
   # POST /recipe_items or /recipe_items.json
   def create
     @recipe_item = RecipeItem.new(recipe_item_params)
+    @recipe_item.user = current_user
 
     respond_to do |format|
       if @recipe_item.save
